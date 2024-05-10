@@ -6,5 +6,9 @@ public class DemoString {
     String dollar = "HKD";
     System.out.println(x + " " + y);
     System.out.println(dollar);
+
+    //2024.05.10
+
+    
   }
 }
