@@ -4,8 +4,8 @@ public class DemoOperator {
     x = x + 1;
     System.out.println("x = " + x);
 
-    x++; // x++ is same variable + 1
-
+    int x2 = x++; // x++ is same variable + 1
+    System.out.println(x2);
     x+=1; // same as x = x + 1
     x+=2; // same as x = x + 2
     ++x; // same as x= x + 1

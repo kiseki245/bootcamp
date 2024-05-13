@@ -61,7 +61,7 @@ public class DemoPrimitives {
     //byte y4 = 128; compile error (Java can identify the syntax error)
     short s1 = -32768; // -32760 to -32767
 
-    long l1 = 91234128734l; //i follow the value means specify this value is a long value
+    long l1 = 91234128734L; //i follow the value means specify this value is a long value
 
     // Premitives for decimal number
     // 1. 10.2 is double value
@@ -78,6 +78,23 @@ public class DemoPrimitives {
     
     double d13 = 14.3;
     d13 = 15.0; //re-assignment
+
+    
+    long l1 = 91234121123123L;
+    long l2 = l1; // l1 has declared as Long and hence l2 no need declare again
+    System.out.println("l2 is " + l1);
+
+    //---------------------------------------------
+    boolean b1;
+    int a = 32;
+    int b = 45;
+    if (a < b){
+      b1 = true;
+      System.out.println(b1);
+    } else {
+      b1 = false;
+      System.out.println(b1);
+    }    
 
   }
 }
