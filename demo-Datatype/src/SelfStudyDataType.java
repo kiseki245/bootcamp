@@ -32,7 +32,7 @@ public class SelfStudyDataType{
     double meter = 0.0254;
     double result;
     result = inch * meter;
-
+    
     System.out.println(inch + " = " + result + " meter");
     
     System.out.println("-----------Exercise 3-----------------");

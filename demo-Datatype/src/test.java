@@ -10,7 +10,7 @@ public class test {
     System.out.println("y2 = " + y2); //3 (?)
     System.out.println("y3 = " + y3); //4
     System.out.println("y4 = " + y4); //5
-
+    
 
     long l1 = 91234121123123L;
     long l2 = l1; // l1 has declared as Long and hence l2 no need declare again

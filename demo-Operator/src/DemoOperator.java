@@ -65,6 +65,21 @@ public class DemoOperator {
     System.out.println(r2);
     System.out.println(r3);
 
+    //challenge 
+    int n = 3;
+    int result = n++ * 3; // original n multiply 3 first, assigne 9 to result and then n = n + 3
+    System.out.println(result); //9
+    System.out.println(n); //4
+
+    int m = 4;
+    int result2 = ++m * 5; // m = m + 1 first, multiply 5, assign 25 to result2
+    System.out.println(result2); //25
+    System.out.println(m); //5
+
+    int k = 4;
+    int result3 = k++ * 7 * ++k;
+    System.out.println(result3); // 168 = (4 * 7) * 6
+    System.out.println(k);
 
   }
 }
