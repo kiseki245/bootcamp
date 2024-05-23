@@ -13,7 +13,7 @@ public class JavaQuest6{
     int last2 = 0;
     int sum;
     for (int i = 1; i <= 15; i++) {
-
+      
         sum = last1 + last2;
         last2 = last1;
         last1 = sum;

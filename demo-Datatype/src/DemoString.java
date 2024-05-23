@@ -89,13 +89,69 @@ public class DemoString {
     System.out.println("No!");
   }
 
-  System.out.println(x3.substring(0, 3).length()); //3
-  System.out.println(x3.substring(0, 3).charAt(1)); //e
+    System.out.println(x3.substring(0, 3).length()); //3
+    System.out.println(x3.substring(0, 3).charAt(1)); //e
 
-  String x4 = x3.substring(0, 3);
-  int l1 = x4.length();
-  System.out.println(l1); // 3, same as line 86 - 89 but not a good choice
+    String x4 = x3.substring(0, 3);
+    int l1 = x4.length();
+    System.out.println(l1); // 3, same as line 86 - 89 but not a good choice
+
+    // isEmpty()
+    // Empty String value -> ""
+    String x7 = " "; // This is not are empty string, space not count as empty
+    System.out.println(x7.isEmpty()); // flase
+    System.out.println(x7.length() == 0); // flase
+    String x8 = "";
+    System.out.println(x8.isEmpty()); // true
+    
+    // isBlank()
+    String x9 = "";
+    System.out.println(x9.isBlank()); // true
+    x9 = " ";
+    System.out.println(x9.isBlank()); // true
+    System.out.println(x9.isEmpty()); // false
+    // isEmpty() is check the length of the variable
+    // isBlank() check the value of the variable
+
+    //subString(0, 3)
+    //subString(0)
+    String s10 = "Hello";
+    System.out.println(s10.substring(0)); // "Hello", from index 0 to the end
+    System.out.println(s10.substring(0, 3)); //"Hel", from index 0 to the index 2 (3-1)
+
+    //hello -> HELLO
+    System.out.println(s10.toUpperCase()); // HELLO
+    System.out.println(s10.toLowerCase()); // hello
+    System.out.println(s10.replace('l', 'x')); //HeXXo
+    System.out.println(s10.replace("ll", "HiHI")); // HeHiHio
+    System.out.println(s10.replace("lll", "s")); // Hello, no match result
 
 
+    System.out.println(s10.contains("ell")); //true
+    System.out.println(s10.contains("s")); //false
+
+    //startsWith() -> check prefix
+
+    System.out.println(s10.startsWith("he")); // false
+    System.out.println(s10.startsWith("He")); // true
+    //endwith -> check surfix
+    System.out.println(s10.endsWith("lo")); //true
+
+    //trim() <- removing the space charactors at the head/tail of the String
+    String s12 = "    Hello,  Bootcamp     ";
+      System.out.println(s12.trim()); //Hello,  Bootcamp
+
+
+      String[] strings = new String[] {"Hello", "abcijk", "vincent", "HeLLo", "  HELLO  "};
+      // how many string contains "ELL", but ignore case
+      // "eLL", "ell", "ELL"....
+      String p = "";
+      for (int i = 0; i < strings.length; i++) {
+        p = strings[i];
+        p.toUpperCase();
+        if (p.contains("ELL")){
+            System.out.println(strings[i]);
+        }
+      }
   }
 }

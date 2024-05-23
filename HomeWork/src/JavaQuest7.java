@@ -15,5 +15,7 @@ public class JavaQuest7 {
       sum += arr[i];
     }
     System.out.println("The sum is " + sum);
-  }
+    }
+
+    
 }
