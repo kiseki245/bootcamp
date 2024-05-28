@@ -142,5 +142,71 @@ public class DemoArray {
              }
              System.out.println("r3 is " + r3); //obkta
 
+             //average
+             
+
+             //swaping in array
+             int[] arr6 = new int[] {6, 10, -4, 13};
+            //swap -4 and 6 -> [-1, 10, 6, 13]
+            // int save = arr6[2];
+            // arr6[2] = arr6[0];
+            // arr6[0] = save; 
+            //  System.out.println(Arrays.toString(arr6));
+            
+             int t = 0;
+             // Level 1:
+             //move -4 to the tail of the array
+             for (int i = 0; i < arr6.length - 1; i++) {
+                t = arr6[i];
+                arr6[i] = arr6[i+1];
+                arr6[i+1] = t;                
+             }
+             System.out.println(Arrays.toString(arr6));
+            //Level 2
+             //Move the max element to the tail
+             // New:[10, -4, 13, 6]
+             // Result [10, 6, -4, 13]
+             
+            for (int i = 0; i < arr6.length-1; i++) {
+             
+                if (arr6[i] > arr6[i+1]){
+                    t = arr6[i];
+                    arr6[i] = arr6[i+1];
+                    arr6[i+1] = t;
+                }
+
+            }
+            System.out.println(Arrays.toString(arr6));
+
+             //Sorting -> {-4, 6, 10, 13}
+            //Now [10, 6, -4, 13]
+            int save = 0;
+             int maxnum = Integer.MIN_VALUE;
+             for (int i = 0; i < arr6.length-1; i++) {
+                
+                for (int j = 0; j < arr6.length-1; j++) {
+                    if (arr6[j] < arr6[i]){
+                        save = arr6[j];
+                        arr6[j] = arr6[j+1];
+                        arr6[j+1] = save;
+                    }
+                }
+             }
+             System.out.println(Arrays.toString(arr6));
+
+             String str = "hello"; // Result -> holle
+             //convert to char[]
+             char[] newstr = new char[str.length()];
+             for (int i = 0; i < str.length(); i++) {
+                newstr[i] = str.charAt(i);
+             } // newstr = str.toCharArray();
+             // char[] strarry = str.toCharArray();
+             System.out.println(Arrays.toString(newstr));
+             char w = newstr[4];
+             newstr[4] = newstr[1];
+             newstr[1] = w;
+             str = String.valueOf(newstr);
+             System.out.println(str); // hole
+
     }
 }
