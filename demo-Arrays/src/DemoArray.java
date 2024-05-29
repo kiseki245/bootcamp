@@ -180,9 +180,9 @@ public class DemoArray {
 
              //Sorting -> {-4, 6, 10, 13}
             int[] arr7 = new int[] {10, 6, -4, 13};
-            System.out.println(arr7.length-1);
+            
             int save = 0;
-             int maxnum = Integer.MIN_VALUE;
+
              for (int i = 0; i < arr7.length-1; i++) {
                 for (int j = 0; j < arr7.length-1; j++) {
                     if (arr7[j+1] < arr7[i]){
@@ -206,7 +206,7 @@ public class DemoArray {
              newstr[4] = newstr[1];
              newstr[1] = w;
              str = String.valueOf(newstr);
-             System.out.println(str); // hole
+             System.out.println(str); // holle
 
-    }
+            }
 }

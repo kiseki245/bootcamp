@@ -153,5 +153,47 @@ public class DemoString {
             System.out.println(strings[i]);
         }
       }
+
+      int count = 0;
+      for (int i = 0; i < strings.length; i++) {
+        if (strings[i].toUpperCase().contains("ELL")){
+        count++;
+        }
+      }
+      System.out.println(count);
+
+      for (int i = 0; i < strings.length; i++) {
+        if (strings[i].equalsIgnoreCase("Hello")){
+          System.out.println(strings[i]);
+        }
+      }
+
+      String s13 = "Helloll";
+
+      System.out.println(s13.indexOf("ll")); //2
+      System.out.println(s13.indexOf('e')); //1
+      System.out.println(s13.indexOf("He")); //0
+      System.out.println(s13.indexOf("ll", 4));// 5
+      System.out.println(s13.indexOf("ll", 6)); // -1 Not found
+      System.out.println(s13.indexOf(101)); // i, ascii 'e' -> 101
+
+      System.out.println(s13.lastIndexOf("ll")); //5, the last ocurence of the patten
+      System.out.println(s13.lastIndexOf("o")); //4
+      //concat
+      String s14 = "abc";
+      s14 += "def";
+      System.out.println(s14);
+
+      String s15 = "abc";
+      s15 = s15.concat("def"); // better performace 
+      System.out.println(s15);
+
+      System.out.println(s14.compareTo(s15)); //0, true
+      System.out.println(s14.equals(s15)); // true / false boolean value
+
+      String s16 = "abc";
+      String s17 = "abc";
+      System.out.println(s16 == s17); // true ?? comparing the string object address
+
   }
 }

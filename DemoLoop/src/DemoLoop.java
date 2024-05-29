@@ -64,7 +64,34 @@ public class DemoLoop {
         }
         System.out.println("total = " + total);
 
+        for (int i = 0; i < 5; i++) { // ROW
+            for (int j = 0; j < 5; j++) { // Column
+                System.out.print("*");
+                // if (j == 4 ){ // 0, 1, 2, 3, 4 counted 5 times
+                //     System.out.println();
+                }
+                System.out.println();
+            }
+        
+        System.out.println("----------------------");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5 - i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println("------------------------");
+        //* 
+        //** 
+        //*** 
+        //**** 
+        //***
+        
+        
+        
+        
+        }
 
         
     }
-}
+
