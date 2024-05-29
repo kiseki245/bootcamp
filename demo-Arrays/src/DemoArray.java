@@ -179,20 +179,20 @@ public class DemoArray {
             System.out.println(Arrays.toString(arr6));
 
              //Sorting -> {-4, 6, 10, 13}
-            //Now [10, 6, -4, 13]
+            int[] arr7 = new int[] {10, 6, -4, 13};
+            System.out.println(arr7.length-1);
             int save = 0;
              int maxnum = Integer.MIN_VALUE;
-             for (int i = 0; i < arr6.length-1; i++) {
-                
-                for (int j = 0; j < arr6.length-1; j++) {
-                    if (arr6[j] < arr6[i]){
-                        save = arr6[j];
-                        arr6[j] = arr6[j+1];
-                        arr6[j+1] = save;
+             for (int i = 0; i < arr7.length-1; i++) {
+                for (int j = 0; j < arr7.length-1; j++) {
+                    if (arr7[j+1] < arr7[i]){
+                        save = arr7[j];
+                        arr7[j] = arr7[j+1];
+                        arr7[j+1] = save;
                     }
                 }
              }
-             System.out.println(Arrays.toString(arr6));
+             System.out.println("Level 3 = " + Arrays.toString(arr7));
 
              String str = "hello"; // Result -> holle
              //convert to char[]
