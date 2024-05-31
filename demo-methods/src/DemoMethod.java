@@ -46,7 +46,7 @@ public class DemoMethod {
         // }
         // return result;
 
-        return String.valueOf(arr)
+        return String.valueOf(arr);
     }
 
     public static int max(int[] arr){
@@ -88,7 +88,8 @@ public class DemoMethod {
     
     }
         public static double cricleArea(int radios){
-
+            // sum += value < 0 ? value * -1 : value;
+            
             return radios * radios * Math.PI; // int * int * double -> double
         }
     }
