@@ -194,6 +194,6 @@ public class DemoString {
       String s16 = "abc";
       String s17 = "abc";
       System.out.println(s16 == s17); // true ?? comparing the string object address
-
+      
   }
 }
