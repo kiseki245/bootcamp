@@ -20,9 +20,17 @@ public class CreateCat {
     c3.setAge(13);
     c3.setName("Abc");
     System.out.println(c3.desc());
+
+    Cat c4 = new Cat();
+
+    System.out.println(c4.getAge());
+    System.out.println(c4.getName());
   }
   //static method belongs to class (static is a tool, describ the object)
   //instance method belongs to object
   //static method ability is limited
   // setLightlever, getToHuman
+
+  
+  
 }
