@@ -1,4 +1,4 @@
-public class DemoInteger {
+public class DemoInteger { //Tutor class name: DemoIntenalCache
   public static void main(String[] args) {
     
     Integer i1 = Integer.valueOf(3);
@@ -20,5 +20,30 @@ public class DemoInteger {
     System.out.println(i3.compareTo(i4)); // 0
 
     //Useless to use the >= for the object
-  }
+
+    Float f1 = 10.12345f; //autobox: float value -> Float Object
+    Float f2 = 10.12345f;
+
+    System.out.println(f1 == f2); //false
+
+    Double d1 = 128.12345d; // same as last case, autobox is perfored 
+    Double d2 = 128.12345d;
+    System.out.println(d1 == d2); //false
+    //Boolean support Internal cahe (-128 to 127)
+    Boolean b1 = true;
+    Boolean b2 = true;
+
+    System.out.println(b1 == b2); // true
+    //Charactor support Internal cache (-128 to 127)
+    Character c1 = 'c'; // autobox char value -> Charactor Object
+    Character c2 = 'c';
+
+    System.out.println(c1 == c2); //true
+
+    Character c3 = '我';
+    Character c4 = '我'; 
+    System.out.println(c3 == c4); //false
+    
+
+  } 
 }
