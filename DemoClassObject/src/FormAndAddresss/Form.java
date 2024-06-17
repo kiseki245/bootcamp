@@ -5,7 +5,7 @@ public class Form {
   private String lastname;
   private Address address;
   
-
+  // constructor, getter, setter
   public Form(String firstname, String lastname, Address address){
     this.firstname = firstname;
     this.lastname = lastname;
@@ -31,11 +31,16 @@ public class Form {
   public String getLastname(){
     return this.lastname;
   }
+  public Address getAddress(){
+    return this.address;
+  }
   public Address address(){
     return this.address;
   }
-
-  public static void main(String[] args) {
-    
+  public String toString(){
+    return "Form" + //
+    " First Name: " + this.firstname +//
+    " Last Name: " + this.lastname + //
+    " Address: " + this.address;
   }
 }
