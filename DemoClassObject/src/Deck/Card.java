@@ -10,10 +10,6 @@ public class Card {
     this.rank = rank;
   }
 
-  public void setRank(){
-    
-  }
-
   public String getSuit(){
     return this.suit;
   }
@@ -26,12 +22,6 @@ public class Card {
   }
   
   public static void main(String[] args) {
-    Deck deck = new Deck();
-    Card[] card = deck.getCards();
-    deck.shuffle();
-    for (int i = 0; i < card.length; i++) {
-      System.out.println(Arrays.toString(card));
-    }
   }
 
 }

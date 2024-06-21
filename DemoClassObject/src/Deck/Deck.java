@@ -1,28 +1,51 @@
 package Deck;
-import java.util.Random;
+
+import java.util.Arrays;
 
 public class Deck {
-  public static String[] suits = new String[] {"DIAMOND", "CLUB", "HEART", "SPARE"};
-  public static String[] ranks = new String[] {"ACE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN"};
-  private static int length = suits.length * ranks.length;
+  private static String[] suits =
+      new String[] {"DIAMOND", "CLUB", "HEART", "SPADE"};
+  private static String[] ranks = new String[] {"ACE", "TWO", "THREE", "FOUR",
+      "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "JACK", "QUEEN", "KING"};
+  public static int length = suits.length * ranks.length;
+
   private Card[] cards;
-  
-  public Deck(){
-    this.cards = new Card[suits.length * ranks.length];
+
+  public Deck() {
+    this.cards = new Card[length];
     int idx = 0;
-     for (String suit : suits){
-      for (String rank : ranks){
+    for (String suit : suits) {
+      for (String rank : ranks) {
         this.cards[idx++] = new Card(suit, rank);
       }
-     }
     }
-    
-  
-  public static void main(String[] args) {
-    
   }
 
-  public Card[] getCards(){
+  public static void test() {
+    System.out.println("hello");
+    Deck d = new Deck();
+    d.getCards();
+  }
+
+  public Card[] getCards() {
     return this.cards;
   }
+
+  public void shuffle(int times) {
+    ShuffleManager sm = new ShuffleManager(getCards());
+    sm.shuffle(times);
+    this.cards = sm.getCards();
+  }
+
+  public static void main(String[] args) {
+    Deck deck = new Deck();
+    deck.shuffle(100);
+    System.out.println("Card[] after shuffle():");
+    for (Card card : deck.getCards()) {
+      System.out.println(card);
+    }
+
+    Deck.test();
+  }
+
 }

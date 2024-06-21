@@ -1,5 +1,6 @@
 package Order;
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class Order {
   private static int count = 0;
@@ -60,11 +61,16 @@ public class Order {
   public static void main(String[] args) {
     Order order = new Order("ABC");
     Item item = new Item(96.0d, 2);
+    
     System.out.println(item.subtotal());
-
+    order.addItem(item);
+    
     Item item2 = new Item(10.0d, 3);
 
     order.addItem(item2);
     System.out.println(order.total());
+
+    Item[] CheckItems = order.getItem();
+
   }
 }
