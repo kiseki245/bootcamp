@@ -1,7 +1,7 @@
 import ExampleORStudy.person;
 //Person.class is parent, while Student.class is child
 public class Student extends Person{
-;
+
   private int studentID;
   
   //Constructor -> the process of constructing students object

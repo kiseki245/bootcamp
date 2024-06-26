@@ -31,6 +31,20 @@ public class DemoObject {
     System.out.println(mc1.hashCode());
     Minicat mc2 = new Minicat("Hi", "Red");
     System.out.println(mc2.hashCode());
+
+
+    Object cat = new Cat(); // Object and Cat is parent and chill relatshipion
+    //Reference is pointing to Object instead of Cat
+    //run() instance method can only be called by object declared by Cat.class
+    //If the object reference is declared by Object.class, it cannot call run()
+    //method
+    // cat.run; //complie error
+    
+
+    //downcast
+    Cat cat2 = (Cat) cat; // Rename why compile error: Java compiler cannot garrete 
+    System.out.println(cat2.run());
+    
   }
 
   
