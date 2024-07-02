@@ -1,6 +1,7 @@
 package markSix;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Ball {
   private int number;
@@ -8,16 +9,27 @@ public class Ball {
     this.number = number;
   }
 
-
-
   public int getNumber(){
     return this.number;
   }
 
   @Override
   public String toString(){
-    return " Number: " + this.number;
+    return " Ball Number: " + this.number;
   }
+
+  @Override
+  public boolean equals(Object obj){
+    if (this == obj){
+      return true;
+    } else if (!(obj instanceof Ball)){
+      return false;
+    }
+    Ball ball = (Ball) obj;
+    return Objects.equals(this.number, ball.getNumber());
+  }
+
+
   public static void main(String[] args) {
     byte b1 = 48; // Java (Special conversion: int -> byte, but without casting in downcast)
 
@@ -36,7 +48,7 @@ public class Ball {
 
     Object ball = new Ball(40);
     //ball.getNumber(); since the ball is pointing to Object
-
+    
     System.out.println(ball.getClass());// class
     Class<?> clazz = ball.getClass();
     System.out.println(clazz);

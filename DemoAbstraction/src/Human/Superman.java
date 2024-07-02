@@ -1,3 +1,4 @@
+package Human;
 public class Superman implements Walkble{
   @Override
   public void walk(){

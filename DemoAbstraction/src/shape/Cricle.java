@@ -10,7 +10,7 @@ public class Cricle implements Shape{
   public Cricle(double redius){
     this.redius = redius;
   }
-
+  @Override
   public double area(){
     
     return BigDecimal.valueOf(redius).multiply(BigDecimal.valueOf(redius)).

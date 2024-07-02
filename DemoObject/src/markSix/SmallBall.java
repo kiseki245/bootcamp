@@ -20,7 +20,7 @@ public class SmallBall extends Ball{
     }
     SmallBall sb = (SmallBall) obj;
     return Objects.equals(this.color, sb.getColor())
-    && Object.equals(super.getNumber(), sb.getNumber());
+    && Objects.equals(super.getNumber(), sb.getNumber());
   }
 
   public int hashCode(){

@@ -1,3 +1,4 @@
+package Human;
 public interface Walkble {
   // Interface
   //1. Ho instance variable

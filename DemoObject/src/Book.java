@@ -30,6 +30,8 @@ public boolean equals(Object obj){
     System.out.println("Same object");
     return true;
   } 
+  //"Instanceof" is checking if the object pointing by reference is an object
+  // produced by Book.class
   if (!(obj instanceof Book)){
     return false;
   }
