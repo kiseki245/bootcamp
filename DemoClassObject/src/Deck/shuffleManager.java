@@ -3,24 +3,26 @@ package Deck;
 import java.util.Random;
 
 public class ShuffleManager {
-  
+
+  // attribute/ Dependency
   private Card[] cards;
 
-  public ShuffleManager(){};
+  public ShuffleManager(Card[] cards) {
+    this.cards = cards;
+  }
 
-  public Card[] getCards(){
+  public Card[] getCards() {
     return this.cards;
   }
 
-  public void shuffle(int times){
+  // Behavior
+  public void shuffle(int times) {
     Card[] newCards = null;
-
     for (int i = 0; i < times; i++) {
       int startIdx = new Random().nextInt(Deck.length - 1) + 1;
       int endIdx = new Random().nextInt(Deck.length - startIdx) + startIdx;
       newCards = new Card[Deck.length];
       int count = 0;
-
       for (int j = startIdx; j <= endIdx; j++) {
         newCards[count++] = this.cards[j];
       }
