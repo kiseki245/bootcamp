@@ -2,7 +2,7 @@ package Clazz;
 
 import java.util.Objects;
 
-public class Superman extends Person{
+public class Superman extends Person implements Flyable, Powerup{
   public Superman(){
     //super(); Implicitly calling Person()
   }
@@ -10,9 +10,13 @@ public class Superman extends Person{
     super(name); //Call person class constractor
 
   }
-  
+  @Override
   public void fly(){
     System.out.println("Fly");
+  }
+  @Override
+  public void PowerUp(){
+    System.out.println("PowerUp");
   }
   public boolean equals(Object obj){
     if (this == obj){
@@ -24,7 +28,7 @@ public class Superman extends Person{
     Superman sm = (Superman) obj;
     return Objects.equals(super.getName(), sm.getName());
   }
-@Override
+  @Override
   public int hashCode(){
     return Objects.hash(super.getName());
   }
@@ -52,6 +56,8 @@ public class Superman extends Person{
     Superman s3 = new Superman("Vincent");
     System.out.println(s1.equals(s3));
     
-
+    Powerup superman = new Superman("Sally"); //What is the point to use interface as object reference
+    superman.PowerUp();
+    
   } 
 }
