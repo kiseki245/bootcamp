@@ -29,7 +29,14 @@ public class Ball implements Comparable<Ball>{
       // -1 means "move to left" (from left to right)
       // return this.number > ball.getNumber() ? -1 : 1; 
       
-      return this.color.getValue() < ball.color.getValue() ? -1 : 1;
+      // return this.color.getValue() < ball.color.getValue() ? -1 : 1; // Q1 
+
+      if (this.color.getValue() < ball.color.getValue())
+        return -1;
+      if (this.color.equals(ball.color) && this.number < ball.getNumber())
+        return -1;
+        return 1;
+
     }
     public String toString(){
       return "Ball " + this.number + " - " + this.color;
@@ -61,6 +68,17 @@ public class Ball implements Comparable<Ball>{
     System.out.println("Q1: " + ballsex);
       // Sort by color ? RED -> White -> Black
       // Sort by color, and then number ? RED -> WHITE -> BLACK, if same color larger number is left
-  
+      ballsex.add(new Ball(11, Color.RED)); //2
+      ballsex.add(new Ball(12, Color.RED)); //1
+      ballsex.add(new Ball(13, Color.RED)); //3
+      ballsex.add(new Ball(11, Color.BLACK)); //2
+      ballsex.add(new Ball(12, Color.BLACK)); //1
+      ballsex.add(new Ball(13, Color.BLACK)); //3
+      ballsex.add(new Ball(11, Color.WHITE)); //2
+      ballsex.add(new Ball(12, Color.WHITE)); //1
+      ballsex.add(new Ball(13, Color.WHITE)); //3
+      Collections.sort(ballsex);
+      System.out.println("Q2: " + ballsex);
+
     }
   }
