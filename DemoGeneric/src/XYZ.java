@@ -23,7 +23,7 @@ public class XYZ<T, U> {
 
     customers.setU(new Customer());
     
-
+    
     XYZ<String, String> strings = new XYZ<>();
   }
 

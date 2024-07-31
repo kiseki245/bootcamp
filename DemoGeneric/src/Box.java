@@ -1,4 +1,4 @@
-public class Box<T> { //<T> just like Unknown * any Type
+public class Box<T>{ //<T> just like Unknown * any Type
   private T value;
 
   public Box(){
@@ -15,7 +15,10 @@ public class Box<T> { //<T> just like Unknown * any Type
   public void setValue(T value){
     this.value = value;
   }
-
+  //The T declared in static method has NO relationship to the T declared in attribute
+  public static <T> Box<T> createBox(T value){
+    return new Box<>(value);
+  }
 
   public static void main(String[] args) {
     //Run time \
@@ -25,8 +28,12 @@ public class Box<T> { //<T> just like Unknown * any Type
     Box<Customer> customerBox = new Box<>();
     customerBox.setValue(new Customer());
 
-
     //You cannot 
     // Box<T> box = new Box<>();
+
+
+    Box<String> stringBox = Box.createBox("Hello");
+    
+    
   }
 }
