@@ -23,5 +23,7 @@ public class StackDemo {
     ss2.add("World");
     ss2.remove("World");
     System.out.println(ss2);
+
+    
   }
 }

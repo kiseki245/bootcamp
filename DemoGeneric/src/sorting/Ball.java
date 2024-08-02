@@ -41,7 +41,7 @@ public class Ball implements Comparable<Ball>{
     public String toString(){
       return "Ball " + this.number + " - " + this.color;
     }
-
+    
     public static void main(String[] args) {
       List<Ball> balls = new ArrayList<>();
       balls.add(new Ball(10, Color.BLACK));
@@ -80,5 +80,8 @@ public class Ball implements Comparable<Ball>{
       Collections.sort(ballsex);
       System.out.println("Q2: " + ballsex);
 
+      
+      Collections.sort(balls, new BallSortByColor()); //Overloading, that is performing the method differs to line 67
+      System.out.println("Comparator: "+ ballsex);
     }
   }

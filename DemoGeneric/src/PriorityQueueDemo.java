@@ -49,7 +49,7 @@ public class PriorityQueueDemo {
     System.out.println(pq3.poll());  //-400
     System.out.println(pq3.poll()); //10
     
-
+    
 
   }
 }
