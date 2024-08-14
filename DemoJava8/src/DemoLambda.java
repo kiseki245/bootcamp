@@ -111,14 +111,14 @@ public class DemoLambda {
   Consumer<Customer> printCustomerName = customer -> System.out.print(customer.getName());
   printCustomerName.accept(new Customer("Jenny"));
   printCustomerName.accept(new Customer("a"));
-  //BiCustomer
+  //BiConsumer
   // void accept(T t, U u);
   int range = 0;
   BiConsumer<Customer, Integer> LuckyDraw = (customer, Number) -> System.out.println(customer.getName() + " LuckyDraw is :" + Number);
   LuckyDraw.accept(new Customer("Eddie"), 2);
   LuckyDraw.accept(new Customer("Edy"), 1);
 
-  //Supply
+  //Supplier
   // public interface Supplier<T> {
   // T get();
   Math.random();
