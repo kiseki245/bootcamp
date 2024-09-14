@@ -187,7 +187,6 @@ GROUP BY e.department_id;
 
 select department_id, salary from employees order by department_id;
 
-
 -- Q12 * Below query excuted on another DB
 -- Split the table as below
 CREATE TABLE jobs (
