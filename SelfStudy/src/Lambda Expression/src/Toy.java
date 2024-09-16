@@ -32,4 +32,7 @@ public class Toy {
     public String toString(){
         return "Name: " + this.name + " Price: " + this.price + " Type: " + this.type + "\n";
     }
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
 }
