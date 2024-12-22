@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class DemoDividedByZero {
     public static void main(String[] args) throws Exception {
         int amount = 0;
@@ -67,5 +69,18 @@ public static int CalculateExpensePerEmpolyee3(){
 
     public static int getDepartmentExpense(){
         return 14000;
+    }
+
+    //Revision
+    public String concat(String x, String y){
+        if (x == null || y ==null){
+            throw new IllegalArgumentException("x or y is null");
+        }
+        return x.concat(y);
+    }
+
+    public void connectD(){
+        
+        // throw new IOException(); //
     }
 }
